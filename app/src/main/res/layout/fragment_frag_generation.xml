@@ -1,0 +1,179 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_generate"
+    tools:context="com.example.aleksandresabanadze.suggestme.ui.FragGeneration">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@drawable/gradient"
+        android:id="@+id/button_layout">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="90dp"
+            android:maxHeight="90dp"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/rename"
+            android:background="@android:color/transparent"
+            android:id="@+id/generate"
+            android:elevation="0dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/load_layout">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/loading"
+            android:background="@android:color/transparent"
+            android:id="@+id/load"
+            android:elevation="5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:padding="16dp"
+        android:background="@drawable/gradient"
+        android:id="@+id/movie_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/movie_poster"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Title"
+                    android:textColor="@color/text_color"
+                    android:textSize="20dp"
+                    android:id="@+id/movie_title"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Release date"
+                    android:id="@+id/movie_date"
+                    android:textColor="@color/text_color"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Language"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_language"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Runtime"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_runtime"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Genre"
+                    android:id="@+id/movie_genre"
+                    android:textColor="@color/text_color"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Budget"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_budget"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Revenue"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_revenue"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Vote"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_vote"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Popularity"
+                    android:id="@+id/movie_popularity"
+                    android:textColor="@color/text_color"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Overview"
+                    android:textColor="@color/text_color"
+                    android:id="@+id/movie_overview"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.5">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/rename"
+                android:textColor="@color/button_color"
+                android:adjustViewBounds="true"
+                android:maxWidth="60dp"
+                android:maxHeight="60dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/notlike_notwatch"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:adjustViewBounds="true"
+                android:maxWidth="60dp"
+                android:maxHeight="60dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:src="@drawable/fav"
+                android:textColor="@color/button_color"
+                android:background="@android:color/transparent"
+                android:id="@+id/like_watch"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
